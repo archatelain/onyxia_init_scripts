@@ -8,8 +8,7 @@ exec 1>log.out 2>&1
 # Pareil pour les variables d'environnement
 env | sort > env_init.out
 
-# On récupère le nom d'utilisateur SSP Cloud à partir du dossier de secrets
-export SSP_USER_NAME=${VAULT_TOP_DIR:1}
+ls
 
 # Se mettre dans le dossier work
 if [[ -d "work" ]]
@@ -27,7 +26,7 @@ import time
 
 print("Hello from Python")
 
-for count in range(1:10):
+for count in range(1,300):
     time.sleep(1)
     print(count)
 END
